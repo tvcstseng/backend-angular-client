@@ -53,7 +53,7 @@ export class UserComponent implements OnChanges {
         // Emit list event
         EmitterService.get(this.listId).emit(users);
         // Empty model
-        this.model = new User();
+        // this.model = new User();
         // Switch editing status
         if (this.editing) {
           this.editing = !this.editing;
@@ -70,7 +70,7 @@ export class UserComponent implements OnChanges {
     // Listen to the 'edit'emitted event so as populate the model
     // with the event payload
     EmitterService.get(this.editId).subscribe((user: User) => {
-      this.model = user
+      this.model = user;
       this.editing = true;
     });
   }

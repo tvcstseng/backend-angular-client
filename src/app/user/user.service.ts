@@ -7,14 +7,14 @@ import {User} from '../dto/user';
 @Injectable()
 export class UserService {
 
-  private userUrl = 'http://localhost:9080/api/user';
+  private userUrl = 'http://192.168.1.164:9080/api/user';
 
   constructor(public http: Http) {
   }
 
 
   addUser(body: Object): Observable<User[]> {
-    const bodyString = JSON.stringify(body); // Stringify payload
+    // const bodyString = JSON.stringify(body); // Stringify payload
     const headers = new Headers({'Content-Type': 'application/json'}); // ... Set content type to JSON
     const options = new RequestOptions({headers: headers}); // Create a request option
 
