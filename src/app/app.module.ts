@@ -15,10 +15,10 @@ import {UserService} from './user/user.service';
     UserComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AlertModule.forRoot()
+    BrowserModule
+    , FormsModule
+    , HttpModule
+    , AlertModule.forRoot()
     , InputTextModule
   ],
   providers: [
